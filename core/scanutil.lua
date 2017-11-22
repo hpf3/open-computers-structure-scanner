@@ -1,6 +1,6 @@
 local component = require('component')
 local admin = component.debug
-local world = admin.getworld()
+local world = admin.getWorld()
 local filesystem = require('filesystem')
 local save = require("save")
 _scanver = 1.0
