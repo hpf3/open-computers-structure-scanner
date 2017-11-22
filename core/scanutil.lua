@@ -32,6 +32,7 @@ if z1 >= z2 then _endz = z1 elseif z2 >= z1 then _endz = z2 end
 local x = _startx
 local y = _starty
 local z = _startz
+print("starting scan")
 while y <= _endy do
  z = _startz
  while z <= _endz do
