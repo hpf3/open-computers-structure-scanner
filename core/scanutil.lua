@@ -47,7 +47,7 @@ while y <= _endy do
  y = y + 1
 end
 os.sleep(1)
-local path = tostring('/hpbuild/structures' .. name .. '/info.lua')
+local path = tostring('/hpbuild/structures/' .. name .. '/info.lua')
 print(path)
 os.sleep(3)
 local file = io.open(path,"w")
