@@ -7,7 +7,7 @@ _scanver = 1.0
 local scanutil = {}
 
 function scanutil.single(x,y,z)
- local id = world.getworld(x,y,z)
+ local id = world.getWorld(x,y,z)
  local meta = world.getMetadata(x,y,z)
  local nbtdat = {}
  if world.hasTileEntity(x,y,z) then
