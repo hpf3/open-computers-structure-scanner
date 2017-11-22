@@ -1,6 +1,6 @@
 local package = {}
 
-package.path = "/lib/?.lua;/usr/lib/?.lua;/home/lib/?.lua;./?.lua;/lib/?/init.lua;/usr/lib/?/init.lua;/home/lib/?/init.lua;./?/init.lua;/hpbuild/inventory_handlers/?.lua"
+package.path = "/lib/?.lua;/usr/lib/?.lua;/home/lib/?.lua;./?.lua;/lib/?/init.lua;/usr/lib/?/init.lua;/home/lib/?/init.lua;./?/init.lua;/hpbuild/inventory_handlers/?.lua;/hpbuild/core/?.lua"
 
 local loading = {}
 
