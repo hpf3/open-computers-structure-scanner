@@ -10,7 +10,7 @@ local function nbtsave(dat,name)
 dat.value.x.value = dat.value.x.value - _startx
 dat.value.y.value = dat.value.y.value - _starty
 dat.value.z.value = dat.value.z.value - _startz
-local nbtfiles = files.open(tostring('/hpbuild/structures/' .. name .. '/nbtbasic/nbtbasic.lua'),"a")
+local nbtfiles = io.open(tostring('/hpbuild/structures/' .. name .. '/nbtbasic/nbtbasic.lua'),"a")
 nbtfiles:write(tostring(serial.serialize(dat) .. "\n"))
 nbtfiles:close()
 end
@@ -27,9 +27,9 @@ local id,meta,nbt,nbtdat = table.unpack(block)
 if files.isDirectory(tostring('/hpbuild/structures/' .. name)) == false then
 files.makeDirectory(tostring('/hpbuild/structures/' .. name .. '/nbtbasic'))
 end
-local build = files.open(tostring('/hpbuild/structures/' .. name .. '/main.lua'),"a")
-build:write(tostring(id .. " " .. meta .. " "))
-build:close()
+local file = io.open(tostring('/hpbuild/structures/' .. name .. '/main.lua'),"a")
+file:write(tostring(id .. " " .. meta .. " "))
+file:close()
 if nbt then nbtsave(nbtdat,name) end
 end
 
