@@ -49,6 +49,7 @@ end
 os.sleep(1)
 local path = tostring('/hpbuild/structures' .. name .. '/info.lua')
 print(path)
+os.sleep(3)
 local file = io.open(path,"w")
 print(file)
 file:write(tostring(name .. '\n' .. 'x ' .. _endx - _startx .. '\n' .. 'y ' .. _endy - _starty .. '\n' .. 'z ' .. _endz - _startz .. '\n' .. 'setup ' .. _setupver .. '\n' .. 'save ' .. _savever .. '\n' .. 'scan ' .. _scanver))
