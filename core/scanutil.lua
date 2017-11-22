@@ -8,6 +8,7 @@ _scanver = 1.0
 local scanutil = {}
 
 function scanutil.single(x,y,z)
+print("scanning block at" .. x,y,z)
  local id = world.getBlockId(x,y,z)
  local meta = world.getMetadata(x,y,z)
  local nbtdat = {}
