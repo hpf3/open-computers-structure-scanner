@@ -17,7 +17,8 @@ print("scanning block at " .. x,y,z)
   nbtdat = world.getTileNBT(x,y,z)
  end
  local nbt = world.hasTileEntity(x,y,z)
- local block = {id,meta,nbt,nbtdat}
+ local block = {}
+ block.id,block.meta,block.nbt,block.nbtdat = id,meta,nbt,nbtdat
  return block
 end
 

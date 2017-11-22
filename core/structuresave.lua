@@ -23,7 +23,7 @@ end
 
 
 function save.basic(block,name)
-local id,meta,nbt,nbtdat = table.unpack(block)
+local id,meta,nbt,nbtdat = block.id,block.meta,block.nbt,block.nbtdat
 if files.isDirectory(tostring('/hpbuild/structures/' .. name)) == false then
 files.makeDirectory(tostring('/hpbuild/structures/' .. name .. '/nbtbasic'))
 end
