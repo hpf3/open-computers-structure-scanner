@@ -1,5 +1,6 @@
 local component = require('component')
 local admin = component.debug
+admin.connectToBlock(admin.getX(),admin.getY(),admin.getZ())
 local world = admin.getWorld()
 local filesystem = require('filesystem')
 local save = require("save")
@@ -7,7 +8,7 @@ _scanver = 1.0
 local scanutil = {}
 
 function scanutil.single(x,y,z)
- local id = world.getWorld(x,y,z)
+ local id = world.getBlockId(x,y,z)
  local meta = world.getMetadata(x,y,z)
  local nbtdat = {}
  if world.hasTileEntity(x,y,z) then
