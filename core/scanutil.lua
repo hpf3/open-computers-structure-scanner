@@ -47,3 +47,5 @@ local info = io.open(tostring('/hpbuild/structures' .. name .. '/info.lua'),"w")
 info:write(tostring(name .. '\n' .. 'x ' .. _endx - _startx .. '\n' .. 'y ' .. _endy - _starty .. '\n' .. 'z ' .. _endz - _startz .. '\n' .. 'setup ' .. _setupver .. '\n' .. 'save ' .. _savever .. '\n' .. 'scan ' .. _scanver))
 info:close()
 end
+
+return scanutil

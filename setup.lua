@@ -19,4 +19,5 @@ if isfolder("/hpbuild/core") == false then mkdir("/hpbuild/core") end
 os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-structure-scanner/master/inventory%20managers/vanilla.lua /hpbuild/inventory_handlers/vanilla.lua")
 os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-structure-scanner/master/modifiedpackage.lua /lib/package.lua")
 os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-structure-scanner/master/autorun.lua /autorun.lua")
-os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-structure-scanner/master/structuresave.lua /hpbuild/core/save.lua")
+os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-structure-scanner/master/core/structuresave.lua /hpbuild/core/save.lua")
+os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-structure-scanner/master/core/scanutil.lua /hpbuild/core/scanutil.lua")
