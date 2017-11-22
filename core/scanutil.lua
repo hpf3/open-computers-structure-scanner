@@ -47,7 +47,9 @@ while y <= _endy do
  y = y + 1
 end
 os.sleep(1)
-local file = io.open(tostring('/hpbuild/structures' .. name .. '/info.lua'),"w")
+local path = tostring('/hpbuild/structures' .. name .. '/info.lua')
+print(path)
+local file = io.open(path,"w")
 print(file)
 file:write(tostring(name .. '\n' .. 'x ' .. _endx - _startx .. '\n' .. 'y ' .. _endy - _starty .. '\n' .. 'z ' .. _endz - _startz .. '\n' .. 'setup ' .. _setupver .. '\n' .. 'save ' .. _savever .. '\n' .. 'scan ' .. _scanver))
 file:close()
