@@ -37,7 +37,7 @@ end
 
 function builder.normal(name)
 local info = io.open(tostring('/hpbuild/structures/' .. name .. '/info.lua'))
-local line = {"ice","cream"}
+local line = {}
 while line ~= nil do
 line = text.tokenize(info:read(*l))
 if line[1] == "x" then
