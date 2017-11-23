@@ -38,7 +38,7 @@ end
 function builder.normal(name)
 local info = io.open(tostring('/hpbuild/structures/' .. name .. '/info.lua'))
 while line ~= nil do
-local line = text.tokenize(info:read('*l'))
+local line = text.tokenize(info:read("*l"))
 if line[1] == "x" then
 _endx = _startx + line[2]
 elseif line[1] == "y" then
@@ -51,7 +51,7 @@ local x = _startx
 local y = _starty
 local z = _startz
 local file = io.open(tostring('/hpbuild/structures/' .. name .. '/main.lua'))
-local struct = text.tokenize(file:read('*a'))
+local struct = text.tokenize(file:read("*a"))
 for i = 0,#struct,2 do
  world.setBlock(x,y,z,struct[i],struct[i + 1])
  x = x + 1
