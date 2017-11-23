@@ -5,9 +5,9 @@ local text = require('text')
 local admin = component.debug
 local world = admin.getPlayer("hpf3").getWorld()
 
-local build = {}
+local builder = {}
 
-function build.extractNBT(path)
+function builder.extractNBT(path)
 local file = io.open(path,"r")
 local nbt = {}
 local id = ""
@@ -34,7 +34,7 @@ end
 return all
 end
 
-function build.normal(name)
+function builder.normal(name)
 local info = io.open(tostring('/hpbuild/structures/' .. name .. '/info.lua'))
 local line{"ice","cream"}
 while line ~= nil do
@@ -64,4 +64,4 @@ for i = 0,#struct,2 do
  end
 end
 end
-return build
+return builder
