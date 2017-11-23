@@ -3,6 +3,7 @@ local filesystem = require('filesystem')
 local serial = require('serialization')
 local text = require('text')
 local admin = component.debug
+local world = admin.getPlayer("hpf3").getWorld()
 
 local build = {}
 
@@ -33,11 +34,33 @@ end
 return all
 end
 
-function build.normal(name,x,y,z)
-local file = io.open(tostring('/hpbuild/structures/' .. name .. '/main.lua')
+function build.normal(name)
+local info = io.open(tostring('/hpbuild/structures/' .. name .. '/info.lua'))
+local line{"ice","cream"}
+while line ~= nil do
+line = text.tokenize(info:read(*l))
+if line[1] == "x" then
+_endx = _startx + line[2]
+elseif line[1] == "y" then
+_endy = _starty + line[2]
+elseif line[1] == "z" then
+_endz = _startz + line[2]
+end
+end
+local x = _startx
+local y = _starty
+local z = _startz
+local file = io.open(tostring('/hpbuild/structures/' .. name .. '/main.lua'))
 local struct = text.tokenize(file:read(*a))
 for i = 0,#struct,2 do
- 
-
-
-
+ world.setBlock(x,y,z,struct[i],struct[i + 1])
+ x = x + 1
+ if x > _endx then
+  z = z + 1
+  x = _startx
+ elseif  x > _endx then
+  y = y + 1
+  z = _startz
+ end
+end
+end
