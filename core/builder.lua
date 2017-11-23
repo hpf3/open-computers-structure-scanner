@@ -23,11 +23,12 @@ dat.value.id = nil
 dat.value.x = nil
 dat.value.y = nil
 dat.value.z = nil
-local block.id = id
-local block.x = x
-local block.y = y
-local block.z = z
-local block.dat = dat
+local block = {}
+block.id = id
+block.x = x
+block.y = y
+block.z = z
+block.dat = dat
 all = table.pack(table.unpack(all),block)
 dat = serial.unserialize(file:read("*l"))
 end
