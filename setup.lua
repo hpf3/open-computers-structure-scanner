@@ -21,3 +21,4 @@ os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-struc
 os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-structure-scanner/master/autorun.lua /autorun.lua")
 os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-structure-scanner/master/core/structuresave.lua /hpbuild/core/save.lua")
 os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-structure-scanner/master/core/scanutil.lua /hpbuild/core/scanutil.lua")
+os.execute("wget -fq https://raw.githubusercontent.com/hpf3/open-computers-structure-scanner/master/core/builder.lua /hpbuild/core/builder.lua")
